@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="UpEffect" />
+    <meta name="keywords" content="Crowdfund Social-Enterprise" />
+    <meta name="viewport" content="width=device-width">
+    <title>Upeffect</title>
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/typography.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+    <!-- <link rel="shortcut icon" type="image/png" href="/content/icons/favicon.png"/> -->
+  </head>
+  <body class="about">
+    <nav>    
+      <ul>
+        <li class="logo"><a href="/"><img src="assets/images/logo_white.png" alt="White UpEffect Logo"></a></li>
+        <li><a href="/crowdfund.html">Crowdfund</a></li>
+        <li><a href="/campaigns.html">Campaigns</a></li>
+        <li><a href="/ally.html">Ally</a></li>
+        <li><a href="/podcast.html">Podcast</a></li>
+        <li><a href="/about.html" class="active">About</a></li>
+        <li>Currency</li>
+        <li> <a href="#TODO" class="pill-button teal">Log In</a></li>
+      </ul>
+  </nav>
+    <section class="banner">
+      <div class="content text-center">
+        <h1>Hello there!</h1>
+        <p>As a self-funded business, we have the privilege of moving deliberately at UpEffect; this allows us to test, 
+          iterate, improve and create services that cater to the evolving needs of social innovators. This also allows 
+          us to learn and become students of the process while navigating the challenges of bootstrapping and parenthood.</p>
+      </div>
+    </section>
+    <section class="strip center">
+      <h1 class="teal">Our Journey</h1>
+      <div class="timeline width-cap center">
+        <div class="graphic">
+          <div class="node active" data-id="1">
+            <div class="line"></div>
+            <div class="circle" data-year="2016"></div>
+          </div>
+          <div class="node" data-id="2">
+            <div class="line"></div>
+            <div class="circle" data-year="2017"></div>
+          </div>
+          <div class="node" data-id="3">
+            <div class="line"></div>
+            <div class="circle" data-year="2018"></div>
+          </div>
+          <div class="node" data-id="4">
+            <div class="line"></div>
+            <div class="circle" data-year="2019"></div>
+          </div>
+          <div class="node" data-id="5">
+            <div class="line"></div>
+            <div class="circle" data-year="2020"></div>
+          </div>
+          <div class="node" data-id="6">
+            <div class="line"></div>
+            <div class="circle" data-year="2021"></div>
+            <div class="line disabled"></div>
+          </div>
+        </div>
+        <div class="narrow text-center">
+          <div data-id="2016" class="show timeline-content">
+            <h5 class="teal">2016</h5>
+            <p>The disparities in social wealth distribution and investors prioritising unethical businesses over socially responsible enterprises inspired the creation of a funding platform that dedicated itself to serving businesses building a kinder society.</p>
+          </div>
+          <div data-id="2017" class="timeline-content">
+            <h5 class="teal">2017</h5>
+            <p>The disparities in social wealth distribution and investors prioritising unethical businesses over socially responsible enterprises inspired the creation of a funding platform that dedicated itself to serving businesses building a kinder society.</p>
+          </div>
+          <div data-id="2018" class="timeline-content">
+            <h5 class="teal">2018</h5>
+            <p>The disparities in social wealth distribution and investors prioritising unethical businesses over socially responsible enterprises inspired the creation of a funding platform that dedicated itself to serving businesses building a kinder society.</p>
+          </div>
+          <div data-id="2019" class="timeline-content">
+            <h5 class="teal">2019</h5>
+            <p>The disparities in social wealth distribution and investors prioritising unethical businesses over socially responsible enterprises inspired the creation of a funding platform that dedicated itself to serving businesses building a kinder society.</p>
+          </div>
+          <div data-id="2020" class="timeline-content">
+            <h5 class="teal">2020</h5>
+            <p>The disparities in social wealth distribution and investors prioritising unethical businesses over socially responsible enterprises inspired the creation of a funding platform that dedicated itself to serving businesses building a kinder society.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pale-blue-bg strip center">
+      <h1 class="teal">Meet the Team</h1>
+      <ul class="team">
+        <li>
+          <img src="/assets/images/bio-sheeza.png" alt="">
+          <h6 class="teal">Sheeza Shah</h6>
+          <p class="text-center">Co-founder & CEO. Sheeza is also a full-time mother, Computer Scientist, islamic finance enthusiast, passionate about new 
+            economy solutions </p>
+        </li>
+        <li>
+          <img src="/assets/images/bio-sharjeel.png" alt="">
+          <h6 class="teal">Sharjeel Chaudhry</h6>
+          <p class="text-center">Co-founder & Strategic Advisor. Sharjeel is also a Harvard Fellow, Technology Consultant, 
+            Cornell alumni</p>
+        </li>
+        <li>
+          <img src="/assets/images/bio-faraz.png" alt="">
+          <h6 class="teal">Faraz Ahmed</h6>
+          <p class="text-center">Web Developer. Faraz is a software engineer with 5+ years of software development experience</p>
+        </li>
+      </ul>
+      </div>
+     
+    </section>
+
+    <section class="strip center">
+      <img class="sculpture" src="assets/images/about-sculpture.png" alt="">
+      <p class="text-center">
+        We’ve spent the past few years building the foundation for UpEffect and in this time, we’ve enjoyed 
+        monumental learnings, successes and positive impact. But there is still a lot of work to do. Reimagining 
+        funding structures and re-envisioning business will require a collective effort and we hope with your 
+        support, we can ensure founders turning to UpEffect can find the success that they need to serve their 
+        communities. Join us, won’t you? :) 
+      </p>
+      <a href="#TODO" class="pill-button pink"><h4>Get in Touch</h4></a>
+    </section>
+    <script>
+      let timeline = document.querySelector(".timeline");
+      timeline.addEventListener('click', function(event) {
+        if (!event.target.matches(".circle")) return;
+
+        let yearNode = event.target.closest('.node'), 
+            nodes = timeline.querySelectorAll('.node'),
+            order = yearNode.dataset.id,
+            year = event.target.dataset.year,
+            contents = timeline.querySelectorAll('.timeline-content');
+            yearContent = timeline.querySelector(`[data-id=${CSS.escape(year)}`);
+        
+        nodes.forEach(node => node.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('show'));
+
+        for(let i = 0 ; i < order ; i++) { nodes[i].classList.add('active');}
+        console.log(yearContent);
+        yearContent.classList.add('show');
+
+
+      })
+    </script>
+  </body>
+</html>
+
