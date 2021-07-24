@@ -391,7 +391,7 @@ footer .social {
 }
 
 footer .social li {
-  padding-right: 5px;
+  padding: 20px 5px 0 0;
 }
 
 footer .newsletter {
@@ -410,6 +410,9 @@ footer .newsletter .pill-button {
   padding: 0.5rem 1rem;
 }
 
+footer img.logo {
+  width: 70px;
+}
 /* SHARED */
 
 
@@ -707,11 +710,27 @@ img.avatar {
 }
 
 .timeline-content {
-  display: none;
+  opacity: 0;
+  height: 0;
+  position: relative;
 }
 
 .timeline-content.show {
-  display: block;
+  opacity: 1;
+  height: auto;
+  transition: opacity 1s ease;
+}
+
+.timeline-content li {
+  width: 100%;
+  margin: 0 0 0.5rem;
+}
+
+.timeline-content img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 90px;
 }
 
 .about .timeline h5 {
@@ -882,6 +901,18 @@ img.people-linking-arms {
   border-radius: 5px 5px 0 0;
   padding: 0.75rem 1rem;
   margin-bottom: 0;
+}
+
+.crowdfund .funding-goal {
+  display: inline-block;
+  padding: 1.5rem 0 0.5rem;
+}
+.crowdfund .funding-goal input {
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid white;
+  color: white;
+  font-size: 1rem;
 }
 
 .crowdfund .line {

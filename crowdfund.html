@@ -149,14 +149,13 @@
       </ul>
     
     </section>
-    <section class="strip center green-texture-bg white"> 
+    <section class="strip center green-texture-bg white text-center"> 
       <h3>Calculate your campaign fee based on your funding goal</h3>
-      <p>If your funding goal is (£) 0</p>
-      <p>Then the UpEffect initial fee of £199 + 5% success fee (excl Stripe fees) will be £199.00.
-        If the campaign is unsuccessful, you will only pay £199.</p>
+      <p><span class="funding-goal">If your funding goal is (£)<input type="number" id="goal"></span></p>
+      <p><span class="fee-result">Then the UpEffect initial fee of £199 + 5% success fee (excl Stripe fees) will be <span id="feeNumber" class="fee-number">£199.00.</span>
+      <br> If the campaign is unsuccessful, you will only pay £199.</p>
     </section>
   
-
     <section class="block">
       <div class="half-columns">
         <div class="image"> 
@@ -419,6 +418,22 @@
       </div>
     </section>
     <script  src="styles/scripts.js"></script>
+    <script>
+      let feeCalculator = document.getElementById('goal');
+      console.log(feeCalculator);
+      feeCalculator.addEventListener('keyup', calcFee);
+
+      function calcFee(){
+        let goal = document.getElementById('goal'),
+            fee = document.getElementById('feeNumber');
+        if ( goal.value == "" || goal.value == "0" ) {
+          fee.innerHTML = "£199.";
+        } else if ( goal.value >= 0) {
+          let totalFee = (199 + (parseFloat(goal.value) * 0.05)).toFixed(2);
+          fee.innerHTML = `£${totalFee}.`;
+        };
+      }
+    </script>
   </body>
 </html>
 
