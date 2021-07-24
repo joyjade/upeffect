@@ -820,9 +820,15 @@ img.avatar {
 
 .podcast section.banner {
   background: no-repeat center/cover url(/assets/images/podcast-banner.png) ;
-  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
-
+.podcast section.banner h3 {
+  padding: 1rem;
+}
+.podcast .podcast-artwork {
+  width: 80%;
+}
 .podcast .hosted {
   padding: var(--padding-02);
 }
