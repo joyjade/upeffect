@@ -1084,8 +1084,10 @@ img.people-linking-arms {
 
 /* CAMPAIGNS */
 .campaigns section.banner {
-  background: no-repeat center/80% url(/assets/images/campaign-banner.png) #FCFBEC;
-  box-shadow: inset 0 0 0 2000px rgba(190, 123, 36, 0.4);
+  background: no-repeat center 5%/100% url(/assets/images/campaign-banner.png) #FCFBEC;
+  /* box-shadow: inset 0 0 0 2000px rgba(190, 123, 36, 0.4); */
+  box-shadow: inset 0 0 0 2000px rgba(211, 94, 31, 0.4);
+
 }
 
 .campaigns section.banner .content {
@@ -1096,16 +1098,24 @@ img.people-linking-arms {
 .campaigns .card-cases {
   display: flex;
   overflow-x: scroll;
-  padding: 2rem;
+  padding: 2rem 3rem 0;
   width: 100vw;
+  
+}
+
+.campaigns ::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .campaigns .card {
   width: 500px;
-  background: var(--teal);
+  background: white;
   margin: 0.75rem;
   display: flex;
   flex-flow: column;
+  position: relative;
+  color: var(--black);
 }
 
 .card-image {
@@ -1113,8 +1123,20 @@ img.people-linking-arms {
   overflow: hidden;
 }
 
-.card-image img {
+.card-image img.cover {
   min-height: 100%;
+}
+
+.card-image img.avatar {
+  position: absolute;
+  z-index: 200;
+  right: -10px;
+  top: 120px;
+  border-radius: unset;
+  height: auto;
+  width: 100px;
+  border: 4px solid white;
+  display: none;
 }
 
 .card-content {
@@ -1145,11 +1167,11 @@ img.people-linking-arms {
 }
 
 .progress-data .flex p {
-  margin: 1rem 0 0;
+  margin: 0;
 }
 
 .progress-data .progress-bar {
-  background: white;
+  background: gray;
   width: 100%;
   border-radius: 50px;
   height: 20px;
@@ -1162,12 +1184,16 @@ img.people-linking-arms {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background: var(--black);
+  background: var(--gold);
   border-radius: 50px;
 }
 
 .card .progress-stats {
   padding: 1rem 0;
+}
+
+.card .progress-stats li {
+  width: 33%;
 }
 
 .card .progress-stats h6 {
@@ -1176,22 +1202,42 @@ img.people-linking-arms {
 }
 
 .campaigns .subscribe {
-  padding: 8rem 0;
+  background: no-repeat center/cover url(/assets/images/gradient-bg.png);
 }
+
+.campaigns .subscribe .half-columns {
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.campaigns .subscribe h1 {
+  line-height: 1.1;
+}
+
+.campaigns .subscribe .half-columns > div:first-of-type { width: 55%; }
+.campaigns .subscribe .half-columns > div:last-of-type { width: 40%; }
 
 .campaigns .subscribe input {
   width: 100%;
-  height: 2.8rem;
-  margin: 0.65rem;
+  height: 2.5rem;
+  margin: 0.35rem /* 0.65rem; */;  
   padding: 0.75rem 1rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  /* background: lightgray; */
+  border: 2px solid lightgray;
+  /* color: white; */
+}
+
+.campaigns .subscribe input::placeholder {
+    /* color: white; */
 }
 
 .campaigns .subscribe .form {
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 }
 .campaigns .subscribe .form .pill-button {
-    width: 40%;
+    width: 30%;
     justify-content: center;
     line-height: 1;
     display: flex;
