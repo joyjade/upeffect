@@ -20,15 +20,12 @@ body {
   --padding-02: 2.25rem;
   --padding-04: 5.5rem;
 }
-
+/* 
 @media screen and (max-width: 1440px) {
   body {
     --content-width: 1000px;
   }
-}
-
-  
-
+} */
 
 h1, h2, h3, h4 {
   font-family: 'Sofia Pro Semibold';
