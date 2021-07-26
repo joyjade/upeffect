@@ -6,7 +6,7 @@ body {
   /* CSS VARIABLES */
   --content-width: 1160px;
   --narrow-width: 700px;
-  --min-height: 550px;
+  --min-height: 650px;
   
   --color: white;
   --pink: #F18D9E;
@@ -18,8 +18,17 @@ body {
   --black: #2c2c2c;
 
   --padding-02: 2.25rem;
-  --padding-04: 5rem;
+  --padding-04: 5.5rem;
 }
+
+@media screen and (max-width: 1440px) {
+  body {
+    --content-width: 1000px;
+  }
+}
+
+  
+
 
 h1, h2, h3, h4 {
   font-family: 'Sofia Pro Semibold';
@@ -551,6 +560,9 @@ img.avatar {
   width: 100%;
 }
 
+.home .how-it-works.green-texture-bg {
+  padding-bottom: 10rem;
+}
 .home .how-it-works h4 {
   padding-bottom: 0.5rem;
   border-bottom: 2.2px solid white;
@@ -559,13 +571,18 @@ img.avatar {
 
 .home .how-it-works h3 {
   font-family: "Sofia Pro Regular";
-  padding-top: 2rem;
+  padding-top: 3rem;
+}
+
+.how-it-works .block-grid {
+  width: 60%;
 }
 
 .home img.icon {
-  height: 100px;
+  height: auto;
   width: auto;
   margin: 1rem 2rem;
+  padding: 1rem;
 }
 
 .home .success {
@@ -606,7 +623,7 @@ img.avatar {
   font-family: 'Sofia Pro Semibold';
 }
 
-.home .sky-bg img {
+.home .navigate img {
   width: 80%;
   transform: translateY(15%);
 }
@@ -791,22 +808,37 @@ img.avatar {
 .ally .block {
   padding: var(--padding-04);
 }
-
+.ally h1 {
+  margin-bottom: 1.75rem;
+}
 .ally .pricing {
   padding-bottom: var(--padding-02);
 }
 .pricing h1 {
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.7rem;
+}
+
+.ally .tier-blocks {
+  max-width: 100%;
+}
+
+.ally .tier-blocks li {
+  margin: 0.5rem;
 }
 
 .ally .tier-blocks li .content {
   border-radius: 5px;
-  padding: 2rem;
-  margin: 0.5rem;
+  padding: 2rem 2rem 1rem;
+  display: flex;
+  height: 100%;
 }
 
 .tier-blocks h6 {
   margin-bottom: 1.35rem;
+}
+
+.tier-blocks .pill-button {
+  margin-top: 1.5rem;
 }
 
 .tier-blocks .underline {
@@ -827,6 +859,7 @@ img.avatar {
 .tier-blocks span {
   flex-grow: 1;
 }
+
 
 /* PODCAST */
 
@@ -909,8 +942,8 @@ img.avatar {
 }
 
 .crowdfund .hot-air-balloons {
-  background: no-repeat right/100% url(/assets/images/crowdfund-hotair.png) ;
-  margin-bottom: -1rem;
+  background: no-repeat left/cover url(/assets/images/crowdfund-hotair.png) ;
+  margin-bottom: -1.6rem;
   z-index: 10;
 }
 
