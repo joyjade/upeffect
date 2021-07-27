@@ -20,12 +20,6 @@ body {
   --padding-02: 2.25rem;
   --padding-04: 5.5rem;
 }
-/* 
-@media screen and (max-width: 1440px) {
-  body {
-    --content-width: 1000px;
-  }
-} */
 
 h1, h2, h3, h4 {
   font-family: 'Sofia Pro Semibold';
@@ -114,6 +108,11 @@ input {
 
 .text-center { text-align: center;}
 .flex {display: flex;}
+
+.mobile-nav {
+  display: none
+}
+
 
 /* COLORS AND BACKGROUNDS */
 
@@ -482,15 +481,12 @@ img.avatar {
 .home section.banner video {
   position: absolute;
   z-index: -1;
+  width: 100%;
 }
 
 .home section.banner .content {
   width: 50rem;
   justify-content: center;
-}
-
-.home section.banner h1 {
-  text-align: center;
 }
 
 .case-study h1 {
@@ -1263,13 +1259,14 @@ img.people-linking-arms {
   /* color: white; */
 }
 
-.campaigns .subscribe input::placeholder {
-    /* color: white; */
+/* .campaigns .subscribe input::placeholder {
+    color: white; 
 }
 
 .campaigns .subscribe .form {
-  /* padding-top: 1rem; */
-}
+   padding-top: 1rem;
+} 
+*/
 .campaigns .subscribe .form .pill-button {
     width: 30%;
     justify-content: center;

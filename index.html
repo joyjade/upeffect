@@ -9,11 +9,12 @@
     <link href="styles/reset.css" rel="stylesheet">
     <link href="styles/typography.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/mobile-styles.css" rel="stylesheet">
     <!-- <link rel="shortcut icon" type="image/png" href="/content/icons/favicon.png"/> -->
   </head>
   <body class="home">
     <!-- REPLACE NAV WITH TEMPLATE -->
-    <nav>    
+    <nav class="m-hide">    
       <ul>
         <li class="logo"><a href="/"><img src="assets/images/logo_white.png" alt="White UpEffect Logo"></a></li>
         <li><a href="/crowdfund.html">Crowdfund</a></li>
@@ -25,15 +26,18 @@
         <li> <a href="#TODO" class="pill-button teal">Log In</a></li>
       </ul>
   </nav>
+  <div class="mobile-nav">
+    
+  </div>
     <section class="banner">
-      <video autoplay loop width="100%">
+      <video autoplay loop>
         <source src="/assets/video/upeffectvideo.mp4"  type="video/mp4">
         Your browser does not support the video element. Kindly update it to latest version.
       </video>
       <div class="content center">
-        <h1>We improve crowdfunding success rates for impactful businesses</h1>
-        <p>We’re advancing opportunities for responsible leaders of the new economy</p>
-        <div>
+        <h1 class="text-center">We improve crowdfunding success rates for impactful businesses</h1>
+        <p class="text-center">We’re advancing opportunities for responsible leaders of the new economy</p>
+        <div class="flex">
           <a href="#" class="pill-button outline">Crowdfund Your Idea</a>
           <a href="#" class="pill-button outline">Join Our Community</a>
         </div>
@@ -83,15 +87,15 @@
       </div>
     </section>
    
-    <section class="strip stats">
+    <section class="strip stats infograph">
       <ul class="left-center">
         <li>
           <span class="figure">20</span>
-          <p>social good <br>companies funded</p>
+          <p>Social good companies funded</p>
         </li>
         <li>
           <span class="figure">70%</span>
-          <p>female-owned</p>
+          <p>Female-owned</p>
         </li>
         <li>
           <span class="figure">65%</span>
@@ -138,7 +142,7 @@
     </section>
 
     <section class="block">
-      <div class="half-columns">
+      <div class="half-columns m-reverse">
         <div>
           <h1 class="teal">Funding for social enterprises is broken and it needs a rethink.</h1>
           <p>
@@ -149,13 +153,13 @@
             rates for women are 15-20% lower than men.
           </p>
         </div>
-        <div>
+        <div class="image">
           <img src="assets/images/home-earth.png" alt="">
         </div>
       </div>
     </section>
 
-    <section class="strip stats">
+    <section class="strip stats infograph">
       <ul class="left-center">
         <li>
           <span class="figure">40%</span>
@@ -176,7 +180,7 @@
     </section>
 
     <section class="block">
-      <div class="half-columns">
+      <div class="half-columns m-reverse">
         <div>
           <h1 class="teal">The case for crowfunding...</h1>
           <p>
@@ -214,7 +218,7 @@
     </section>
     <section class="block center sky-bg">
       <h1 class="text-center width-cap teal solution">UpEffect emerged as a solution to help companies find success and serve society in kinder ways.</h1>
-      <div class="half-columns">
+      <div class="half-columns m-reverse">
         <div>
           <h1 class="teal">Introducing UpEffect</h1>
           <h6>A crowdfunding and support platform advancing opportunities for responsible leaders of the new economy.</h6>
