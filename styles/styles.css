@@ -731,6 +731,7 @@ img.avatar {
   border: 1px solid var(--color);
   width: 90px;
   height: 2px;
+  background: var(--color);
 }
 
 .timeline .line.disabled {
@@ -767,6 +768,7 @@ img.avatar {
 .timeline-content li {
   width: 100%;
   margin: 0 0 0.5rem;
+  line-height: 1.2;
 }
 
 .timeline-content img {
@@ -1154,7 +1156,7 @@ img.people-linking-arms {
 
 /* CAMPAIGNS */
 .campaigns section.banner {
-  background: no-repeat center 5%/100% url(/assets/images/campaign-banner.png) #FCFBEC;
+  background: no-repeat center 5%/100% url(/assets/images/campaign-banner-rs.png) #FCFBEC;
   /* box-shadow: inset 0 0 0 2000px rgba(190, 123, 36, 0.4); */
   box-shadow: inset 0 0 0 2000px rgba(211, 94, 31, 0.4);
 
@@ -1169,7 +1171,7 @@ img.people-linking-arms {
   display: flex;
   padding: 2rem 3rem 0;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .campaigns ::-webkit-scrollbar {
