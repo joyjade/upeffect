@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>toggle</title>
+    <g id="toggle" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#FFFFFF" x="2" y="3" width="15.5555556" height="1.33333333" rx="0.666666667"></rect>
+        <rect id="Rectangle-Copy" fill="#FFFFFF" x="2" y="9" width="15.5555556" height="1.33333333" rx="0.666666667"></rect>
+        <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="2" y="15" width="15.5555556" height="1.33333333" rx="0.666666667"></rect>
+    </g>
+</svg>

@@ -1,4 +1,20 @@
 !(function(d){
+  // HEADROOM
+  let elem = document.querySelector("header");
+  var headroom  = new Headroom(elem);
+  headroom.init();
+
+  function mobileToggle() {
+    let toggler = document.querySelector('.toggler');
+    let nav = document.querySelector('nav');
+    toggler.addEventListener('click', function(event) {
+      nav.classList.toggle('open');
+      toggler.classList.toggle('open');
+    })
+  }
+
+  mobileToggle();
+
   // CAROUSEL
   let slideName = "carousel-slide", 
       slides = d.getElementsByClassName(slideName), 
@@ -89,22 +105,24 @@
   
   // FAQ TOGGLE
   let faq = document.getElementsByClassName('faq')[0];
+  if(faq) {
+    faq.addEventListener('click', function(event) {
+      if (!event.target.matches('.plus')) return;
+  
+      let question =  event.target, 
+          qa =  question.closest(".qa"),
+          qas = faq.querySelectorAll(".qa");
+      
+      qas.forEach(answer => {
+        if (answer == qa) return; 
+        answer.classList.remove("show")
+      });
+      
+      qa.classList.toggle("show");
+      // qa.querySelector('.plus').classList.add('.minus');
+  
+    }, false);
+  }
 
-  faq.addEventListener('click', function(event) {
-    if (!event.target.matches('.plus')) return;
-
-    let question =  event.target, 
-        qa =  question.closest(".qa"),
-        qas = faq.querySelectorAll(".qa");
-    
-    qas.forEach(answer => {
-      if (answer == qa) return; 
-      answer.classList.remove("show")
-    });
-    
-    qa.classList.toggle("show");
-    // qa.querySelector('.plus').classList.add('.minus');
-
-  }, false);
   
 }(document));

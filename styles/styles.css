@@ -110,8 +110,8 @@ input {
 .text-center { text-align: center;}
 .flex {display: flex;}
 
-.mobile-nav {
-  display: none
+.mobile-nav, .m-only {
+  display: none;
 }
 
 
@@ -437,6 +437,10 @@ footer .badges {
   align-items: center;
   height: 80px;
   padding-top: 1rem;
+}
+
+footer .badges.m-only {
+  display: none;
 }
 
 footer .badges img {

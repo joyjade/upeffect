@@ -10,22 +10,31 @@
     <link href="styles/typography.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
     <link href="styles/mobile-styles.css" rel="stylesheet">
+    <script  src="scripts/headroom.js"></script>
     <!-- <link rel="shortcut icon" type="image/png" href="/content/icons/favicon.png"/> -->
   </head>
   <body class="crowdfund">
-    <!-- REPLACE NAV WITH TEMPLATE -->
-    <nav class="m-hide">    
-        <ul>
-          <li class="logo"><a href="/"><img src="assets/images/logo_white.png" alt="White UpEffect Logo"></a></li>
-          <li><a href="/crowdfund.html" class="active">Crowdfund</a></li>
-          <li><a href="/campaigns.html">Campaigns</a></li>
-          <li><a href="/ally.html">Ally</a></li>
-          <li><a href="/podcast.html">Podcast</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li>Currency</li>
-          <li> <a href="#TODO" class="pill-button teal">Log In</a></li>
-        </ul>
+    <!-- REPLACE NAV AND HEADER WITH TEMPLATE -->
+    <nav>    
+      <ul>
+        <li class="logo m-hide"><a href="/"><img src="assets/images/logo_white.png" alt="White UpEffect Logo"></a></li>
+        <li><a href="/crowdfund.html">Crowdfund</a></li>
+        <li><a href="/campaigns.html">Campaigns</a></li>
+        <li><a href="/ally.html">Ally</a></li>
+        <li><a href="/podcast.html">Podcast</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li>Currency</li>
+        <li> <a href="#TODO" class="pill-button teal">Log In</a></li>
+      </ul>
     </nav>
+    <header class="mobile-nav headroom">
+      <div class="logo"><a href="/"><img src="assets/icons/logos/upeffect.png" alt="White UpEffect Logo"></a></div>
+      <div class="toggler"> 
+        <img src="/assets/icons/toggle.svg" class="menu-icon show" alt="">
+        <img src="/assets/icons/x.svg" class="x-icon" alt="">
+      </div>
+    </header>
+    <!--  -->
     <section class="banner">
       <div class="content">
         <div class="left-center">
@@ -465,7 +474,7 @@
       </div>
     </section>
 
-    <!-- REPLACE FOOTER -->
+<!-- REPLACE FOOTER WITH TEMPLATE -->
     <footer class="green-texture-bg">
       <div class="subheader">
         <li class="logo"><a href="/"><img src="assets/images/logo_white.png" alt="White UpEffect Logo"></a></li>
@@ -508,6 +517,7 @@
             <li><a href="https://www.theupeffect.com/community">Community</a></li>
             <li><a href="https://www.theupeffect.com/upeffect-handbook">Creator’s Handbook</a></li>
             <li><a href="http://www.subscribepage.com/upeffect-crowdfunding-academy">Crowfunding Academy</a></li>
+            <li></li>
           </ul>
         </div>
         <div>
@@ -515,10 +525,11 @@
             <li class="heading">Privacy</li>
             <li><a href="https://www.theupeffect.com/privacy-policy">Privacy Policy</a></li>
             <li><a href="https://www.theupeffect.com/terms-of-use">Terms Of Use</a></li>
-            <li class="badges">
+            <li class="badges m-hide">
               <img src="/assets/icons/logos/zebra-coop-white.png">
               <img src="/assets/icons/logos/ecology-badge.svg">
             </li>
+            <li></li>
           </ul>
         </div>
         <div>
@@ -529,6 +540,10 @@
             <li><input type="text" placeholder="Name"></li>
             <li><input type="text" placeholder="Email"></li>
             <li><a href="" class="pill-button text-center pink">Get the Digest</a></li>
+            <li class="badges m-only">
+              <img src="/assets/icons/logos/zebra-coop-white.png">
+              <img src="/assets/icons/logos/ecology-badge.svg">
+            </li>
           </ul>
         </div>
 
@@ -537,8 +552,9 @@
         <p class="small">Copyright 2021, UpEffect. All rights reserved | Registered in England & Wales: 10189459 </p>
       </div>
     </footer>
+<!--  -->
 
-    <script  src="styles/scripts.js"></script>
+    <script  src="scripts/scripts.js"></script>
     <script>
       let feeCalculator = document.getElementById('goal');
       console.log(feeCalculator);
