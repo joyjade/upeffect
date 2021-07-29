@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 101;
+    z-index: 900;
   }
 
   .mobile-nav .logo {
@@ -375,8 +375,8 @@
     width: 100%;
   }
 
-  .podcast .testimonials {
-    padding-top: var(--padding-04);
+  .podcast .testimonials .carousel {
+    --min-height: 95vh;
   }
 
   .podcast .testimonials h2 {
@@ -446,5 +446,22 @@
     margin: 0;
   }
 
+  /* PODCAST */
+
+  .podcast .testimonials {
+    max-height: max-content;
+  }
+
+  .podcast-wrapper {
+    --spacing: 0.5rem;
+  }
+
+  .podcast .embed {
+    --spacing: 1rem;
+  }
+
+  .podcast .hosted {
+    padding: 1rem 0;
+  }
 
 }

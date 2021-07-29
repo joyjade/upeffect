@@ -274,7 +274,7 @@ section.extra-bottom {
 .carousel-slide.initial,
 .carousel-slide.active {
   opacity: 1;
-  z-index: 900;
+  z-index: 90;
 }
 
 .carousel-slide.previous,
@@ -289,7 +289,7 @@ section.extra-bottom {
   height: 1.8rem;
   transform: translateY(-100%);
   cursor: pointer; 
-  z-index: 1001; 
+  z-index: 400; 
   --color: var(--teal);
 }
 .carousel-button.previous { left: 200px;}
@@ -1057,7 +1057,7 @@ img.people-linking-arms {
   color: white;
 }
 
-.crowdfund a:hover, .home .block-grid a:hover {
+.crowdfund .resources a:hover, .home .block-grid a:hover {
   text-decoration: underline;
 }
 
