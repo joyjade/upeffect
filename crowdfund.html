@@ -9,11 +9,12 @@
     <link href="styles/reset.css" rel="stylesheet">
     <link href="styles/typography.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/mobile-styles.css" rel="stylesheet">
     <!-- <link rel="shortcut icon" type="image/png" href="/content/icons/favicon.png"/> -->
   </head>
   <body class="crowdfund">
     <!-- REPLACE NAV WITH TEMPLATE -->
-    <nav>    
+    <nav class="m-hide">    
         <ul>
           <li class="logo"><a href="/"><img src="assets/images/logo_white.png" alt="White UpEffect Logo"></a></li>
           <li><a href="/crowdfund.html" class="active">Crowdfund</a></li>
@@ -34,7 +35,7 @@
       </div>
     </section>
     <section class="block">
-      <div class="half-columns">
+      <div class="half-columns m-reverse">
         <div>
           <h1 class="teal">The case for crowdfunding…</h1>
           <p>
@@ -52,7 +53,7 @@
     </section>
 
     <section class="strip hot-air-balloons">
-      <div class="half-columns ">
+      <div class="half-columns">
         <div>
           <h1 class="teal">Crowdfunding can propel these efforts</h1>
         </div>
@@ -65,7 +66,7 @@
     </section>
 
     <section class="block pale-blue-bg">
-      <div class="half-columns">
+      <div class="half-columns m-reverse">
         <div>
           <p>
             Instead of simply providing another platform for campaigns to raise money without any help, UpEffect 
@@ -156,6 +157,43 @@
       <p><span class="fee-result">Then the UpEffect initial fee of £199 + 5% success fee (excl Stripe fees) will be <span id="feeNumber" class="fee-number">£199.00.</span>
       <br> If the campaign is unsuccessful, you will only pay £199.</p>
     </section>
+
+    <section class="strip center case-study pale-blue-bg">
+      <div class="text-center width-cap">
+        <h6 class="subheader">CASE STUDY - THRAEDABLE</h6>
+        <h1 class="teal">Turning stories into ethical clothes</h1>
+        <div class="narrow">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/TbqIjZs-Upk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="text-center">Environmentally friendly clothing inspired by people's stories through artistic expression. 50% of profits are shared with our partner NGOs.</p>
+        </div>
+        <div class="stats">
+          <ul class="left-center">
+            <li>
+              <span class="figure">£11,740</span>
+              <h6>RAISED</h6>
+            </li>
+            <li>
+              <span class="figure">266</span>
+              <h6>BACKERS</h6>
+            </li>
+            <li>
+              <span class="figure">£10,000</span>
+              <h6>GOAL</h6>
+            </li>
+          </ul>
+        </div>
+        <div class="bgtstimonials narrow">
+          <img class="avatar" src="/assets/images/testimonials/aghiles.jpg"/>
+          <p>“Using UpEffect for our crowdfunding launch was an important first step for our social enterprise. The UpEffect team gave us the structure and direction needed to successfully reach our fundraising goal of £10,000 - a target that we thought was beyond our reach. With genuine interest in our social objective and close help from their team, we wouldn't be where we are today without UpEffect.”</p>
+          <span class="name">Aghiles Ourad</span>
+          <p>
+            <i>Founder of Thraedable <br>Raised <b>£11,740</b></i>
+          </p>
+        </div>
+      </div>
+    </section>
   
     <section class="block">
       <div class="half-columns">
@@ -168,7 +206,7 @@
             When social enterprises are denied capital, we all miss out. We help founders reach socially conscious customers, 
             access our funding pot and learn on our campaign tools for crowdfunding success.
           </p>
-          <a href="#" class="pill-button pink">Apply Now</a>
+          <a href="https://airtable.com/shrAci5GnatYVT1IM" target="_blank" class="pill-button pink">Apply Now</a>
         </div>
       </div>
     </section>
@@ -176,20 +214,28 @@
       <h2 class="teal">Resources</h3>
       <ul class="block-grid resources">
         <li class="pink-bg">
+          <a href="https://airtable.com/shr7xTtZSiXIyFBhp" target="_blank">
           <img src="/assets/icons/gradcap.png" alt="Drawing of graduation cap">
           <h6>Apply for a scholarship</h6>
+          </a>
         </li>
         <li class="blue-bg">
-          <img src="/assets/icons/academy.png" alt="Drawing of building with columns">
-          <h6>Join our free Crowdfunding Academy</h6>
+          <a href="http://www.subscribepage.com/upeffect-crowdfunding-academy" target="_blank">
+            <img src="/assets/icons/academy.png" alt="Drawing of building with columns">
+            <h6>Join our free Crowdfunding Academy</h6>
+          </a>
         </li>
         <li class="royal-blue-bg">
-          <img src="/assets/icons/handbook.png" alt="Drawing of a book">
-          <h6>Access our free Creator Handbook</h6>
+          <a href="https://www.theupeffect.com/upeffect-handbook" target="_blank">
+            <img src="/assets/icons/handbook.png" alt="Drawing of a book">
+            <h6>Access our free Creator Handbook</h6>
+          </a>
         </li>
         <li class="teal-bg">
-          <img src="/assets/icons/community.png" alt="Drawing of three figures together">
-          <h6>Join our community</h6>
+          <a href="https://airtable.com/shrL6wACEqvrmQIiZ">
+            <img src="/assets/icons/community.png" alt="Drawing of three figures together">
+            <h6>Join our community</h6>
+          </a>
         </li>
       </ul>
     </section>
@@ -287,7 +333,7 @@
       </div>
     </section> 
     <section class="strip center pink-texture-bg">
-      <h1 class="white">
+      <h1 class="white text-center">
         We're in this with you.
       </h1>
       <h3>Every step of the way.</h3>
@@ -418,24 +464,6 @@
         </div>
       </div>
     </section>
-    <script  src="styles/scripts.js"></script>
-    <script>
-      let feeCalculator = document.getElementById('goal');
-      console.log(feeCalculator);
-      feeCalculator.addEventListener('keyup', calcFee);
-
-      function calcFee(){
-        let goal = document.getElementById('goal'),
-            fee = document.getElementById('feeNumber');
-        if ( goal.value == "" || goal.value == "0" ) {
-          fee.innerHTML = "£199.";
-        } else if ( goal.value >= 0) {
-          let totalFee = (199 + (parseFloat(goal.value) * 0.05)).toFixed(2);
-          fee.innerHTML = `£${totalFee}.`;
-        };
-      }
-    </script>
-
 
     <!-- REPLACE FOOTER -->
     <footer class="green-texture-bg">
@@ -480,7 +508,6 @@
             <li><a href="https://www.theupeffect.com/community">Community</a></li>
             <li><a href="https://www.theupeffect.com/upeffect-handbook">Creator’s Handbook</a></li>
             <li><a href="http://www.subscribepage.com/upeffect-crowdfunding-academy">Crowfunding Academy</a></li>
-            <li><a href="https://ecologi.com/upeffect">Ecology Planting Tracker</a></li>
           </ul>
         </div>
         <div>
@@ -488,8 +515,10 @@
             <li class="heading">Privacy</li>
             <li><a href="https://www.theupeffect.com/privacy-policy">Privacy Policy</a></li>
             <li><a href="https://www.theupeffect.com/terms-of-use">Terms Of Use</a></li>
-            <li class="heading"><a href="">Join our Tribe</a></li>
-            <li><img src="/assets/icons/logos/zebra-coop-white.png" class="logo"></li>
+            <li class="badges">
+              <img src="/assets/icons/logos/zebra-coop-white.png">
+              <img src="/assets/icons/logos/ecology-badge.svg">
+            </li>
           </ul>
         </div>
         <div>
@@ -508,6 +537,24 @@
         <p class="small">Copyright 2021, UpEffect. All rights reserved | Registered in England & Wales: 10189459 </p>
       </div>
     </footer>
+
+    <script  src="styles/scripts.js"></script>
+    <script>
+      let feeCalculator = document.getElementById('goal');
+      console.log(feeCalculator);
+      feeCalculator.addEventListener('keyup', calcFee);
+
+      function calcFee(){
+        let goal = document.getElementById('goal'),
+            fee = document.getElementById('feeNumber');
+        if ( goal.value == "" || goal.value == "0" ) {
+          fee.innerHTML = "£199.";
+        } else if ( goal.value >= 0) {
+          let totalFee = (199 + (parseFloat(goal.value) * 0.05)).toFixed(2);
+          fee.innerHTML = `£${totalFee}.`;
+        };
+      }
+    </script>
   </body>
 </html>
 
