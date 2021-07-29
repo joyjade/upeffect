@@ -328,7 +328,7 @@ nav {
   width: 100%;
   font-family: 'Sofia Pro Regular';
   padding: 1rem var(--padding-02);
-  z-index: 100;
+  z-index: 890;
 }
 
 nav a, nav {
@@ -1167,10 +1167,9 @@ img.people-linking-arms {
 
 .campaigns .card-cases {
   display: flex;
-  overflow-x: scroll;
   padding: 2rem 3rem 0;
-  width: 100vw;
-  
+  width: 100%;
+  overflow-x: scroll;
 }
 
 .campaigns ::-webkit-scrollbar {
@@ -1179,13 +1178,17 @@ img.people-linking-arms {
 }
 
 .campaigns .card {
-  width: 500px;
+  width: 350px;
   background: white;
   margin: 0.75rem;
   display: flex;
   flex-flow: column;
   position: relative;
   color: var(--black);
+}
+
+.campaigns .card-cases-wrapper {
+  width: 100vw;
 }
 
 .card-image {
