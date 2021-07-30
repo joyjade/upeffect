@@ -511,7 +511,7 @@
     margin: 0 2rem 0 0;
     scroll-snap-align: start;
   }
-
+  
   .progress-data .flex {
     flex-flow: row;
   }

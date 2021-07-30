@@ -1191,7 +1191,17 @@ img.people-linking-arms {
 
 .campaigns .card-cases-wrapper {
   width: 100vw;
+  position: relative;
 }
+
+.campaigns .carousel-button {
+  top: 4%;
+  --color: white;
+}
+
+.campaigns .carousel-button.previous { left: 70px;}
+.campaigns .carousel-button.next { right: 70px;}
+
 
 .card-image {
   height: 200px;

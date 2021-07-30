@@ -83,6 +83,9 @@
       <div class="card-cases-wrapper">
         <h2 class="text-center white">Featured Campaigns</h2>
 
+        <div class="carousel-button previous" id="move_left"></div>
+        <div class="carousel-button next" id="move_right"></div>
+
         <!-- REPLACE -->
         <div class="card-cases">
           <div class="card">
@@ -332,15 +335,6 @@
           <a href="#" class="pill-button teal">Sign Up</a>
         </div>
       </div>
-        <!-- <div class="text-center">
-          <h2 class="teal">Subscribe</h1>
-          <h6>Get updates on new campaigns</h6>
-        </div>
-        <div class="form text-center flex narrow">
-          <input type="text" placeholder="Name">
-          <input type="email" placeholder="Email Address">
-          <a href="#" class="pill-button teal">Sign Up</a>
-        </div> -->
     </section>
 
 <!-- REPLACE FOOTER WITH TEMPLATE -->
@@ -424,6 +418,29 @@
 <!--  -->
 
     <script src="/scripts/scripts.js"></script>
+    <script>
+      let moveLeft = document.getElementById('move_left'),
+          moveRight = document.getElementById('move_right'),
+          campaigns = document.querySelector('.card-cases-wrapper'),
+          container = document.querySelector('.card-cases');
+
+      campaigns.addEventListener('click', function(event) {
+        let distance = container.scrollLeft;
+        if(event.target == moveLeft) {
+          container.scrollTo({
+            left: distance += -500,
+            behavior: 'smooth'
+          }) 
+        } else if (event.target == moveRight) {
+          container.scrollTo({
+            left: distance += 500,
+            behavior: 'smooth'
+          }) 
+        }
+      })
+
+
+    </script>
   </body>
 </html>
 
