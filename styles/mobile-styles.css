@@ -411,6 +411,22 @@
     text-align: center;
   }
 
+  .ally .sectors .narrow {
+    flex-flow: column;
+    padding: 0 var(--mobile-padding);
+  }
+
+  .ally .sectors h5 {
+    margin: 0.35rem;
+  }
+
+  .ally .sectors .col-2 h5:last-of-type {
+    border-bottom: none
+  }
+
+  .ally .sectors .col-2:first-of-type h5:last-of-type { margin-bottom: 0; }
+  .ally .sectors .col-2:last-of-type h5:first-of-type { margin-top: 0;}
+
   /* PODCAST */
   .podcast .podcast-artwork {
     width: 100%;
