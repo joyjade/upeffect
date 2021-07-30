@@ -497,7 +497,11 @@
   }
   .campaigns .card-cases-wrapper {
     width: 92vw;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
+  }
+
+  .campaigns .card-cases-wrapper h2 {
+    padding-bottom: 1.2rem;
   }
 
   .campaigns .card-cases {
@@ -511,7 +515,15 @@
     margin: 0 2rem 0 0;
     scroll-snap-align: start;
   }
-  
+
+  .campaigns .carousel-button {
+    bottom: -100px;
+    top: unset;
+  }
+
+  .campaigns .carousel-button.previous { left: 10px;}
+  .campaigns .carousel-button.next { right: 10px;}
+
   .progress-data .flex {
     flex-flow: row;
   }
