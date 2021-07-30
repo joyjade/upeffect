@@ -36,11 +36,9 @@
     z-index: 900;
   }
 
-  .mobile-nav .logo {
-    padding-right: 0.25rem;
-  }
   .mobile-nav .logo img {
-    width: 120px;
+    width: 130px;
+    padding: 0.3rem 0.3rem 0;
   }
 
   .flex {
@@ -49,13 +47,13 @@
 
   .toggler {
     display: block;
-    height: 25px;
+    height: 30px;
     position: relative;
   }
 
   .toggler img {
     opacity: 0;
-    width: 25px;
+    width: 30px;
     position: absolute;
     top: 0;
     right: 0; 
@@ -87,19 +85,28 @@
     transform: translateX(110vw);
     transition: transform 0.8s ease;
     position: fixed;
-    width: 100vw;
+    width: 60vw;
     height: 100%;
   }
   nav ul {
     flex-flow: column;
     align-items: flex-start;
     padding-top: 3rem;
+    height: 100%;
   }
 
   nav ul li:not(:first-of-type) {
     margin-bottom: 0.75rem;
     font-size: 1rem;
     padding-left: 1rem;
+    flex: 0 1 auto;
+  }
+
+  nav ul li:last-of-type {
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
   }
 
   nav.open {
@@ -112,10 +119,21 @@
     color: var(--black);
     margin-left: 0;
     font-size: 0.9rem;
+    height: max-content;
   }
 
   nav a {
     padding-bottom: 0.2rem;
+  }
+
+  nav .currency {
+    position: absolute;
+    bottom: 47px;
+    right: 55px;
+  }
+
+  nav img.flag {
+    width: 40px;
   }
 
   footer {

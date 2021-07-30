@@ -369,6 +369,11 @@ nav .pill-button {
   width: 10rem;
 }
 
+nav img.flag {
+  width: 25px;
+  border: 2px solid white;
+}
+
 /* FOOTER */
 footer {
   padding: 3rem;
