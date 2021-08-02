@@ -3,7 +3,12 @@
   let elem = document.querySelector("header"), elem2 = document.querySelector("nav");
   var mobileHeadroom  = new Headroom(elem); 
   var navHeadroom = new Headroom(elem2);
-  mobileHeadroom.init(); navHeadroom.init();
+  
+  mobileHeadroom.init(); 
+
+  if(screen.width > 520) {
+    navHeadroom.init();
+  }
 
   function mobileToggle() {
     let toggler = document.querySelector('.toggler');
@@ -43,7 +48,6 @@
     } else {
       slide++;
     }
-    console.log("I'm trying to slide forwards");
     moveCarouselTo(slide);
   }
 
@@ -53,7 +57,6 @@
     } else {
       slide--; 
     }
-    console.log("I'm trying to slide backwards");
     moveCarouselTo(slide);
   }
 
@@ -91,10 +94,6 @@
     }
   }
 
-  function setSlideDots() {
-    let dots = d.getElementsByClassName('.dots')[0];
-    
-  }
   function initCarousel() {
     setSlideClasses();
     setEventListeners();

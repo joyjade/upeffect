@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   body {
     --content-width: 100%;
     --narrow-width: 100%;
@@ -67,7 +67,7 @@
     opacity: 0;
   }
 
-  .headroom {
+  header.headroom {
     position: absolute;
     top: 0;
   }
@@ -343,6 +343,14 @@
     padding: 0.25rem;
   }
 
+  .home ul.resources li:not(:first-of-type) img {
+    position: absolute;
+    height: 120%;
+    width: 105%;
+    top: -18px;
+    left: -8px;
+  }
+
   .home ul.resources .content {
     padding: 0 var(--mobile-padding);
     height: calc(0.4 * 100vw);
@@ -362,7 +370,7 @@
   .logos img {
     max-height: 90px;
     width: auto;
-    padding: 0.75rem;
+    padding: 0.95rem;
     max-width: 40%;
   }
 
@@ -380,8 +388,8 @@
   }
 
   .ally .success {
-    background-size: 400%;
-    background-position-y: 0;
+    background-size: 300%;
+    background-position-y: 35%;
   }
 
   .ally .statement {
@@ -482,6 +490,7 @@
 
   .crowdfund .success {
     padding: 6rem 0;
+    background-size: 280%;
   }
 
   .crowdfund .toolkit ul {

@@ -427,15 +427,22 @@
           container = document.querySelector('.card-cases');
 
       campaigns.addEventListener('click', function(event) {
-        let distance = container.scrollLeft;
+        let distance = container.scrollLeft, vector;
+
+        if(screen.width > 520) {
+          vector = 500;
+        } else {
+          vector = screen.width;
+        }
+
         if(event.target == moveLeft) {
           container.scrollTo({
-            left: distance += -500,
+            left: distance += -(vector),
             behavior: 'smooth'
           }) 
         } else if (event.target == moveRight) {
           container.scrollTo({
-            left: distance += 500,
+            left: distance += vector,
             behavior: 'smooth'
           }) 
         }
