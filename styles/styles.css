@@ -374,6 +374,24 @@ nav img.flag {
   border: 2px solid white;
 }
 
+nav .pinned {
+  display: none;
+}
+
+nav.headroom.headroom--unpinned, nav.headroom.headroom--not-top {
+  position: fixed;
+  background: white;
+  --color: var(--black);
+  transition: all 0.3s ease;
+  top: 0;
+}
+
+nav.headroom.headroom--not-top .pinned { display: block; padding: 0 0.75rem 0.5rem;}
+nav.headroom.headroom--not-top .default { display: none;}
+nav.headroom.headroom--not-top ul {
+  padding-top: 0;
+}
+
 /* FOOTER */
 footer {
   padding: 3rem;

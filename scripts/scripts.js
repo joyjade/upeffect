@@ -1,8 +1,9 @@
 !(function(d){
   // HEADROOM
-  let elem = document.querySelector("header");
-  var headroom  = new Headroom(elem);
-  headroom.init();
+  let elem = document.querySelector("header"), elem2 = document.querySelector("nav");
+  var mobileHeadroom  = new Headroom(elem); 
+  var navHeadroom = new Headroom(elem2);
+  mobileHeadroom.init(); navHeadroom.init();
 
   function mobileToggle() {
     let toggler = document.querySelector('.toggler');
