@@ -1374,7 +1374,7 @@ img.people-linking-arms {
 }
 
 .progress-data .progress-bar {
-  background: var(--black);
+  background: lightgray;
   width: 100%;
   border-radius: 50px;
   height: 20px;
