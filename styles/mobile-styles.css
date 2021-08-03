@@ -288,11 +288,13 @@
   }
   
   .home .stats.infograph .figure {
-    width: 40%;
     margin-bottom: 0;
   }
-  .home .stats.infograph p, .home .stats.infograph span {
-    text-align: left;
+  .home .stats.infograph .left-center {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
   }
 
   .home .how-it-works h3 {
@@ -309,12 +311,17 @@
     margin: 0.5rem;
   }
 
+  .home .how-it-works .block-grid {
+    width: 80%;
+  }
+
   .home .how-it-works .block-grid li {
     width: 50%;
   }
 
   .home img.icon {
     padding: 0;
+    max-height: 90px;
   }
 
   .home .how-it-works.green-texture-bg {
@@ -368,10 +375,15 @@
   }
 
   .logos img {
-    max-height: 90px;
+    max-height: 100px;
     width: auto;
-    padding: 0.95rem;
+    padding: 0.95rem 1.2rem;
     max-width: 40%;
+    height: auto;
+  }
+
+  .logos img:nth-of-type(3) {
+    max-width: 80px;
   }
 
   /* ALLY */
@@ -493,6 +505,10 @@
     background-size: 280%;
   }
 
+  .crowdfund .success h1 {
+    padding: 0  var(--mobile-padding);
+  }
+
   .crowdfund .toolkit ul {
     padding-top: 1rem;
   }
@@ -550,6 +566,9 @@
   .campaigns .card-cases {
     padding: 0;
     scroll-snap-type: x mandatory;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-x: repeat(320px);
+    scroll-snap-destination: 0 0;
   }
 
   .campaigns .card {
