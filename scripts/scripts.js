@@ -6,7 +6,7 @@
   
   mobileHeadroom.init(); 
 
-  if(screen.width > 520) {
+  if(window.innerWidth > 520) {
     navHeadroom.init();
   }
 
