@@ -371,7 +371,6 @@ nav .pill-button {
 
 nav img.flag {
   width: 25px;
-  border: 2px solid white;
 }
 
 @media screen and (min-width: 521px) {
@@ -892,6 +891,7 @@ img.avatar {
 
 .tier-blocks .pill-button {
   margin-top: 1.5rem;
+  line-height: 1.2;
 }
 
 .tier-blocks .underline {
